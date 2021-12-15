@@ -3,7 +3,7 @@ import pickle
 import streamlit as st
 import pandas as pd
 import numpy as np
-import webbrowser
+
 
 st.title("Fuel Guzzler Predictor")
 pickle_in = open('mpg.pkl', 'rb')
