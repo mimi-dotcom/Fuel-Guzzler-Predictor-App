@@ -2,4 +2,3 @@ streamlit
 tweepy
 pandas
 numpy
-webbrowser
