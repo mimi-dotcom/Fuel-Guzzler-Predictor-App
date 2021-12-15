@@ -7,7 +7,7 @@ import numpy as np
 
 st.title("Fuel Guzzler Predictor")
 pickle_in = open('mpg.pkl', 'rb')
-model =pickle.load(pickle_in)
+model = pickle.load(pickle_in)
 
 No_cylinders = st.number_input("No of cylinders in the car")
 displacement = st.number_input("whats the engine cc ?")
