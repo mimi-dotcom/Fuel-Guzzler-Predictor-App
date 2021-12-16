@@ -3,10 +3,11 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import joblib
+import pickle
 
 st.title("Fuel Guzzler Predictor")
-model = joblib.load('mpg.pkl')
+pickle_in = open('mpg.pkl', 'rb')
+model = pickle.load(pickle_in)
 
 No_cylinders = st.number_input("No of cylinders in the car")
 displacement = st.number_input("whats the engine cc ?")
