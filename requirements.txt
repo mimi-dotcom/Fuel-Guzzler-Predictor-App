@@ -1,4 +1,4 @@
 streamlit
-tweepy
+pickle
 pandas
 numpy
