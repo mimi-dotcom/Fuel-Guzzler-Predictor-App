@@ -1,15 +1,16 @@
 
-import pickle
+
 import streamlit as st
 import pandas as pd
 import numpy as np
+import pickle
 
 
-st.title("Fuel Guzzler Predictor")
 pickle_in = open('mpg.pkl', 'rb')
 model = pickle.load(pickle_in)
 
-No_cylinders = st.number_input("No of cylinders in the car")
+
+no_cylinders = st.number_input("No of cylinders in the car")
 displacement = st.number_input("whats the engine cc ?")
 horsepower = st.number_input("Enter the Horsepower")
 weight = st.number_input("weight of the car in kg")
@@ -26,7 +27,7 @@ elif(origin_country == 'European'):
 elif(origin_country == 'Asian'):
     origin = 3
 
-mileage = model.predict([[No_cylinders, displacement, horsepower, weight,
+mileage = model.predict([[no_cylinders, displacement, horsepower, weight,
                         acceleration, modelyear, origin]])
 
 st.title(f"""Mileage of the car is""")
